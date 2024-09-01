@@ -1,0 +1,12 @@
+def FindAutoCount(n):
+    if n is None:
+        return 0
+
+    n = str(n)
+    length = len(n)
+    for i in range(length):
+        count = n.count(str(i))
+        if int(n[i]) != count:
+            return 0
+    return len(set(n))
+print(FindAutoCount("00001"))
